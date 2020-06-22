@@ -119,8 +119,6 @@ async function _export({
 
 	const entryPoints = entry.split(' ').map(entryPoint => {
 		const resolved = resolve(origin, `${basepath}/${cleanPath(entryPoint)}`);
-		if (!resolved.href.endsWith('/')) resolved.href += '/';
-
 		return resolved;
 	});
 
